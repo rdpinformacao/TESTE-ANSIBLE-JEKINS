@@ -2,23 +2,23 @@
 ##
 ##   nome do script yaml: 6-confignocpro.yml
 ##   descricao: Este script foi feito para atualizar o nocpro da versao 18.10 para 20.10.
-##   autor: marcos antonio rodrigues da silva junior.
-##   email: marcos.rodrigues@terceiro.rnp.br.
+##   autor:xxxxxxxxxxx
+##   email: xxxxxxxxxxx.
 ##   data de criacao: 11/06/2021.
 ##   chamado de criacao/motivo: N/A  (fazer o deploy do codigo nocPro2_auto
-##   versao 1.2
+##   versao 1.0
 ##
 ##########################################################################
 
 ---
-- hosts: ctr_pe_rs_hml
-  remote_user: gtiadm
+- hosts: '{{ host }}'
+  remote_user: '{{ user }}'
   become: True
   any_errors_fatal: True
   tasks:
       - name: " 1° Adicionando o diretorio nocPro2_auto em /tmp/ teste "
         synchronize:
-            src:  nocPro2_auto
+            src:  /etc/ansible/dataDestino/nocPro2_auto
             dest: /tmp/
             recursive: yes
             delete: yes
