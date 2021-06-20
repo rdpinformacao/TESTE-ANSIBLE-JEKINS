@@ -11,7 +11,7 @@
 ##########################################################################
 
 ---
-- hosts: '{{ host }}'
+- hosts: ctr_pe_rs_hml
   remote_user: gtiadm
   become: True
   any_errors_fatal: True
