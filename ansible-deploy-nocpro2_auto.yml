@@ -28,6 +28,7 @@
             perms: yes
             rsync_opts:
                  - "--exclude=.git"
+                 - "--exclude=ansible-deploy-nocpro2_auto.yml"
                  
        - name: " 2° Trocando o owner do diretorio e a permissao de arquivos"
          file:
