@@ -19,7 +19,7 @@
       - name: " 1° Adicionando o diretorio nocPro2_auto em /usr/share/centreon/ "
         synchronize:
             src:  TESTE-ANSIBLE-JEKINS/..
-            dest: /tmp/centreon-teste/
+            dest: /usr/share/centreon/
             recursive: yes
             delete: yes
             compress: yes
@@ -27,4 +27,12 @@
             owner: yes
             perms: yes
             rsync_opts:
-                 - "--exclude=TESTE-ANSIBLE-JEKINS/.git"
+                 - "--exclude=.git"
+                 
+       - name: " 2° Trocando o owner do diretorio e a permissao de arquivos"
+         file:
+            path: /usr/share/centreon/nocPro2_auto
+            owner: root
+            group: centreon
+            mode: '0750'
+            recurse: yes
