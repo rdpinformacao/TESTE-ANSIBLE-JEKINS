@@ -30,8 +30,8 @@
                  - "--exclude=.git"
                  - "--exclude=ansible-deploy-nocpro2_auto.yml"
                  
-       - name: " 2° Trocando o owner do diretorio e a permissao de arquivos"
-         file:
+      - name: " 2° Trocando o owner do diretorio e a permissao de arquivos"
+        file:
             path: /usr/share/centreon/nocPro2_auto
             owner: root
             group: centreon
