@@ -21,7 +21,6 @@
             src:  TESTE-ANSIBLE-JEKINS/..
             dest: /usr/share/centreon/
             recursive: yes
-            delete: yes
             compress: yes
             group: yes
             owner: yes
