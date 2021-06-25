@@ -1,10 +1,10 @@
 #######################################################################
 ##
-##   nome do script yaml: 6-confignocpro.yml
-##   descricao: Este script foi feito para atualizar o nocpro da versao 18.10 para 20.10.
-##   autor:xxxxxxxxxxx
-##   email: xxxxxxxxxxx.
-##   data de criacao: 11/06/2021.
+##   nome do script yaml: ansible-deploy-nocpro2_auto.yml
+##   descricao: Este script foi feito para atualizar o nocPro2_auto nos Pops
+##   autor: marcos.rodrigues
+##   email: marcos.rodrigues@terceiro.rnp.br
+##   data de criacao: 25/06/2021.
 ##   chamado de criacao/motivo: N/A  (fazer o deploy do codigo nocPro2_auto
 ##   versao 1.0
 ##
@@ -16,10 +16,10 @@
   become: True
   any_errors_fatal: True
   tasks:
-      - name: " 1° Adicionando o diretorio nocPro2_auto em /tmp/ teste "
+      - name: " 1° Adicionando o diretorio nocPro2_auto em /usr/share/centreon/ "
         synchronize:
-            src:  nocPro2_auto
-            dest: /tmp/
+            src:  TESTE-ANSIBLE-JEKINS/..
+            dest: /tmp
             recursive: yes
             delete: yes
             compress: yes
