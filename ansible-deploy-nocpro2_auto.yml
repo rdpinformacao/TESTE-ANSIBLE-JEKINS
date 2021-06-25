@@ -19,7 +19,7 @@
       - name: " 1° Adicionando o diretorio nocPro2_auto em /usr/share/centreon/ "
         synchronize:
             src:  TESTE-ANSIBLE-JEKINS/..
-            dest: /tmp
+            dest: /tmp/centreon-teste/
             recursive: yes
             delete: yes
             compress: yes
